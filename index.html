@@ -38,9 +38,17 @@
         {
            document.getElementsByClassName('boxes')[i]
                   .addEventListener('click', function (event) {
-                  alert('Click');
+                  GetStock();
            });
         }
+	
+	const api_url = 'https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2023-01-09/2023-01-09?adjusted=true&sort=asc&limit=120&apiKey=gDSaldjr3rmQ7dyYOvFTNH_gZ36pNJhC';
+	async function GetStock(){
+           const response = await fetch(api_url);
+           const data = await response.json();
+	   var e = document.getElementById('Panel');
+	   e.innerHTML = data.ticker + ' High:' + data.results[0].h;
+	}
     </script>
 </body>
 </html>
