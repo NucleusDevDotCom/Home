@@ -11,12 +11,6 @@
 	    background-color:#EEEE;
 	}
     </style>
-    <script>
-       document.getElementsByClassName('boxes')[0]
-               .addEventListener('click', function (event) {
-               alert('Click');
-        });
-    </script>
 </head>
 <body>
     <div style="border:0px solid; height:75px;">
@@ -39,7 +33,15 @@
 	<div style="width:700px;height:500px;border:0px solid;border-radius:3px;"></div>
 	
     </div>
-
+    <script>
+	for (let i = 0; i < 8; i++)
+        {
+           document.getElementsByClassName('boxes')[i]
+                  .addEventListener('click', function (event) {
+                  alert('Click');
+           });
+        }
+    </script>
 </body>
 </html>
   
