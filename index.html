@@ -11,9 +11,33 @@
 	    background-color:#EEEE;
 	}
     </style>
+    <script>
+        document.addEventListener('readystatechange', event => { 
+        if (event.target.readyState === "complete") {GetWeather();}});
+
+        // Get Weather
+      	async function GetWeather(){
+           // lat/lon - Orlando
+	   var lat = 'lat=28.5383';
+           var lon = '&lon=-81.3792';
+	   var exclude = '&exclude=hourly,daily';
+           var api_key = '&appid=f11dd97f4628b430a08ec2c38546d542';
+           var units = '&units=imperial'
+           var api_url = 'https://api.openweathermap.org/data/2.5/weather?' + lat + lon + exclude + units + api_key;
+           const response = await fetch(api_url);
+           const data = await response.json();
+	   var e = document.getElementById('WeatherPanel');
+	   e.innerHTML = '      <div style="float:right;height:50px;width:75px;border:0px solid;text-align:right;margin-right:5px;">Weather </br>' + data.name + 
+			 '</div><div style="float:right;height:50px;width:20px;border:0px solid;margin-top:13px;">&deg;F</div>' +
+                         '      <div style="float:right;height:50px;width:50px;border:0px solid;margin-top:10px;font-size:20px;">' + data.main.temp + '</div>';
+                         
+	};
+
+    </script>
 </head>
 <body>
     <div style="border:0px solid; height:75px;">
+    <div id="WeatherPanel" style="display:inline-block; height:55px; width:155px;border:2px solid;border-radius:3px;float:right;background-color:#EEEE;"></div>
     <div style="margin-left:10px;width:182px;float:left; height:81px;border:0px solid;"><img src="Nucleus.png" alt="Nucleus Image"></div>
     <div style="width:100%;float:left; height:25px;border:0px solid;font-size:larger;">NucleusDev - Development Solutions </div>
     </div>
@@ -34,6 +58,7 @@
 	
     </div>
     <script>
+        
 	var today = new Date();
         var dd = String(today.getDate()-1).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -94,6 +119,8 @@
                          'Low: ' + data.results[0].l + '<br></p></div>';
            e.style = 'margin:7px;';
 	};
+
+        
 
     </script>
 </body>
