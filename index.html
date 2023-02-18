@@ -9,33 +9,52 @@
         }
 	.boxes:hover{
 	    background-color:#EEEE;
+		
+	}
+	.boxes{
+		text-align:center;
+		width:150px;
+		height:55px;
+		margin:0px;
+		margin-left:5px;
+		margin-top:12px;
+		
+		display:inline-block;
+		border:1px solid;
+		border-radius:5px;
 	}
     </style>
-    <script src="weather.js"></script>
+	<script src="weather.js"></script>
 </head>
 <body>
-    <div style="border:0px solid; height:75px;">
-    <div id="WeatherPanel" style="display:inline-block; height:80px; width:500px;border:0px solid;border-radius:3px;float:right;"></div>
-    <div style="margin-left:10px;width:182px;float:left; height:81px;border:0px solid;"><img src="Nucleus.png" alt="Nucleus Image"></div>
-    <div style="width:100%;float:left; height:25px;border:0px solid;font-size:larger;">NucleusDev - Development Solutions </div>
-    </div>
+    <div style="width:100%;border:0px solid;overflow-x:auto;">
+		
+		<div style="float:left; width:350px; height:120px; border:0px solid;">
+			<div style="margin-left:10px;float:left;border:0px solid;"><img src="Nucleus.png" alt="Nucleus Image"></div>
+			<div style="float:left;border:0px solid;font-size:larger;">NucleusDev - Development Solutions </div>
+		</div>
+		<div id="WeatherPanel" style="display:inline-block; height:80px; width:535px;border:0px solid;border-radius:3px;"></div>
+	</div>
        
-    <hr />
-    <div style="overflow:auto;white-space:nowrap;width:100%;height:80px;border:0px solid;">
-	<div class="boxes" style="text-align:center;width:150px;height:55px;margin-left:5px;margin:0px;display:inline-block;border:1px solid;border-radius:5px;">Volatility</div>
-	<div class="boxes" style="text-align:center;width:150px;height:55px;margin-left:5px;margin:0px;display:inline-block;border:1px solid;border-radius:5px;">Stocks</div>
-	<div class="boxes" style="text-align:center;width:150px;height:55px;margin-left:5px;margin:0px;display:inline-block;border:1px solid;border-radius:5px;">Crypto</div>
-	<div class="boxes" style="text-align:center;width:150px;height:55px;margin-left:5px;margin:0px;display:inline-block;border:1px solid;border-radius:5px;">Ebay</div>
-	<div class="boxes" style="text-align:center;width:150px;height:55px;margin-left:5px;margin:0px;display:inline-block;border:1px solid;border-radius:5px;">Youtube</div>
-	<div class="boxes" style="text-align:center;width:150px;height:55px;margin-left:5px;margin:0px;display:inline-block;border:1px solid;border-radius:5px;">Empty</div>
-	<div class="boxes" style="text-align:center;width:150px;height:55px;margin-left:5px;margin:0px;display:inline-block;border:1px solid;border-radius:5px;">Empty</div>
-	<div class="boxes" style="text-align:center;width:150px;height:55px;margin-left:5px;margin:0px;display:inline-block;border:1px solid;border-radius:5px;">Empty</div>
-    </div>
-    <div style="overflow:auto;white-space:nowrap;width:100%;height:535px;border:0px solid;border-radius:3px;">
-	<div id='Panel' style="width:700px;height:500px;border:0px solid;border-radius:3px;"></div>
+    
 	
+    <div style="overflow:auto;white-space:nowrap;width:100%;height:95px;border:0px solid;">
+	<div class="boxes" >Volatility</div>
+	<div class="boxes" >Stocks</div>
+	<div class="boxes" >Crypto</div>
+	<div class="boxes" >Ebay</div>
+	<div class="boxes" >Youtube</div>
+	<div class="boxes" >Empty</div>
+	<div class="boxes" >Empty</div>
+	<div class="boxes" >Empty</div>
     </div>
-    <script>
+    
+	<div style="width:100%; height:500px; border:0px solid; margin-top:5px; ">
+		<div style="float:left; height:500px;width:200px;border:1px solid;border-radius:5px;"></div>
+		<div id='Panel' style="float:left; display:inline-block; height:500px; width:700px;border:0px solid;border-radius:3px; margin-left:7px;"></div>
+	</div>
+	
+	<script>
         
 	var today = new Date();
         var dd = String(today.getDate()-1).padStart(2, '0');
@@ -70,14 +89,14 @@
            const response = await fetch(api_url);
            const data = await response.json();
 	   var e = document.getElementById('Panel');
-	   e.innerHTML = '<div style="border:1px solid; border-radius:3px;margin:7px;width:200px;padding:5px;>"' +
-                         '<p><b>' + data.ticker + '</b><br>' +
-                         'Date: ' + eDate + '<br>' +
-                         'Close: ' + data.results[0].c + '<br>' + 
-                         'Open: ' + data.results[0].o + '<br>' +
-			 'High: ' + data.results[0].h + '<br>' +
-                         'Low: ' + data.results[0].l + '<br></p></div>';
-           e.style = 'margin:7px;';
+	   e.innerHTML = '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+		              '<p><b>' + data.ticker + '</b><br>' +
+                      'Date: ' + eDate + '<br>' +
+                      'Close: ' + data.results[0].c + '<br>' + 
+                      'Open: ' + data.results[0].o + '<br>' +
+			          'High: ' + data.results[0].h + '<br>' +
+                      'Low: ' + data.results[0].l + '<br>' +
+					  '</p></div>';
 	};
 
 	// Get Stock
@@ -88,14 +107,15 @@
            const response = await fetch(api_url);
            const data = await response.json();
 	   var e = document.getElementById('Panel');
-	   e.innerHTML = '<div style="border:1px solid; border-radius:3px;margin:7px;width:200px;padding:5px;>"' +
-                         '<p><b>' + data.ticker + '</b><br>' +
-                         'Date: ' + eDate + '<br>' +
-                         'Close: ' + data.results[0].c + '<br>' + 
-                         'Open: ' + data.results[0].o + '<br>' +
-			 'High: ' + data.results[0].h + '<br>' +
-                         'Low: ' + data.results[0].l + '<br></p></div>';
-           e.style = 'margin:7px;';
+	   
+        e.innerHTML = '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+		              '<p><b>' + data.ticker + '</b><br>' +
+                      'Date: ' + eDate + '<br>' +
+                      'Close: ' + data.results[0].c + '<br>' + 
+                      'Open: ' + data.results[0].o + '<br>' +
+			          'High: ' + data.results[0].h + '<br>' +
+                      'Low: ' + data.results[0].l + '<br>' +
+					  '</p></div>';
 	};
 
         
