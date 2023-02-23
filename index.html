@@ -55,11 +55,16 @@
 	<script>
         
 	var today = new Date();
-        var dd = String(today.getDate()-1).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        var yyyy = today.getFullYear();
- 
-
+	var day = today.getDay();
+	var offset = -1; // Only get Friday when it is Saturday, Sunday or Monday
+	if (day === 0 ) {let offset = -2;}
+	if (day === 1 ) {let offset = -3;}
+	today.setDate(today.getDate() + offset);
+	
+	var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+	
 	var ticker;
         var url;
 	const time = "/range/1/day";
