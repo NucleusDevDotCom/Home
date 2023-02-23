@@ -1,10 +1,10 @@
 document.addEventListener('readystatechange', event => { 
-        if (event.target.readyState === "complete") {GetWeather();}});
+     if (event.target.readyState === "complete") {}});
 
-    // Get Weather
-    async function GetWeather(){
+// Get Weather
+async function GetWeather(){
 	
-	var e = document.getElementById('WeatherPanel');
+	var e = document.getElementById('Panel');
 	var o = GetURL('-81.3792','28.5383');
 	const res_o = await fetch(o);
     const dat_o = await res_o.json();
@@ -36,7 +36,7 @@ document.addEventListener('readystatechange', event => {
 }
 	
 	function GetHTML(name, temp){
-	return '<div style="float:left;height:60px; width:125px;background-color:#EEEE; border:1px solid; border-radius:5px;margin-right:7px;margin-top:7px;">' +
+	return '<div style="float:left;height:60px; width:125px;background-color:#EEEE; border:1px solid; border-radius:5px;margin:7px">' +
 	       '<div style="display:inline-block;border:0px solid;width:100%; margin-top:5px; height:23px;text-align:center;">' + name + '</div></br>' + 
 	       '<div style="display:inline-block;border:0px solid;width:50px; margin-left:27px;height:23px;text-align:right;">' + temp + '</div>' +                         
 	       '<div style="display:inline-block;border:0px solid;width:14px; height:23px;">&deg;F</div>' +                         
