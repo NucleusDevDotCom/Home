@@ -41,9 +41,9 @@
 		<div class="boxes" >Weather</div>
 		<div class="boxes" >Volatility</div>
 		<div class="boxes" >Stocks</div>
+		<div class="boxes" >Youtube</div>
 		<div class="boxes" >Crypto</div>
 		<div class="boxes" >Ebay</div>
-		<div class="boxes" >Youtube</div>
 		<div class="boxes" >Empty</div>
 		<div class="boxes" >Empty</div>
     </div>
@@ -88,6 +88,12 @@
         .addEventListener('click', function (event) {
 	    GetStock();
         });
+	
+	// YouTube
+	document.getElementsByClassName('boxes')[3]
+        .addEventListener('click', function (event) {
+	    GetYouTube();
+        });
        
 	    
 	// Get Volatility
@@ -108,7 +114,7 @@
 					  '</p></div>';
 	};
 
-	// Get Stock
+	// Get Stock   
 	async function GetStock(){
 	   var ticker = "CHI";
            var api_url = 'https://api.polygon.io/v2/aggs/ticker/' + ticker + time + '/' + bDate + '/' + eDate + '?adjusted=true&sort=asc&limit=120&apiKey=gDSaldjr3rmQ7dyYOvFTNH_gZ36pNJhC';
@@ -127,6 +133,13 @@
 					  '</p></div>';
 	};
 
+	async function GetYouTube(){
+		var e = document.getElementById('Panel');
+		
+		e.innerHTML = '<div style="border:1px solid; border-radius:3px;width:225px;padding:15px;">' + 
+		              '<a href="https://www.youtube.com/@NucleusDev" target="_blank">Youtube Channel - NucleusDev</a>' +
+                      '</div>';
+	}
         
 
     </script>
