@@ -14,7 +14,7 @@
 	.boxes{
 	    font-size:11px;
 		text-align:center;
-		width:90px;
+		width:79px;
 		height:65px;
 		margin:0px;
 		margin-left:5px;
@@ -32,18 +32,16 @@
     	
 	<div style="float:left; width:350px; height:120px; border:0px solid;">
 		<div style="margin-left:10px;float:left;border:0px solid;"><img src="Nucleus.png" alt="Nucleus Image"></div>
-		<div style="float:left;border:0px solid;font-size:larger;">Welcome to NucleusDev.com</div>
+		<div style="float:left;border:0px solid;font-size:larger;">Welcome to NucleusDev.com </div>
 	</div>
 	
 	<div style="float:left; width:100%; height:1px; border-top:1px solid;margin-top:7px;margin-bottom:7px;border-color:#AAAA;"></div>
 	
 	<div style="float:left; width:100%; border:0px solid;">
-		<div class="boxes" >Weather</div>
-		<div class="boxes" >Volatility</div>
-		<div class="boxes" >Stocks</div>
-		<div class="boxes" >Youtube</div>
-		<div class="boxes" >Crypto</div>
-		<div class="boxes" >Ebay</div>
+		<div class="boxes" ><img src="weather.png" alt="Weather"></div>
+		<div class="boxes" ><img src="Volitility.png" alt="Weather"></div>
+		<div class="boxes" ><img src="stocks2.png" alt="Weather"></div>
+		<div class="boxes" ><img src="youtube.png" alt="Weather"></div>
     </div>
     
 	<div style="float:left; width:100%; height:1px; border-top:1px solid;margin-top:13px;margin-bottom:13px;border-color:#AAAA;"></div>
@@ -131,12 +129,15 @@
 					  '</p></div>';
 	};
 
+	// Get Youtube
 	async function GetYouTube(){
 		var e = document.getElementById('Panel');
 		
 		e.innerHTML = '<div style="border:1px solid; border-radius:3px;width:225px;padding:15px;">' + 
 		              '<a href="https://www.youtube.com/@NucleusDev" target="_blank">Youtube Channel - NucleusDev</a>' +
-                      '</div>';
+                      '</div><br/>';
+		e.innerHTML = e.innerHTML + 
+		              '<iframe width="787" height="443" src="https://www.youtube.com/embed/CwoIV5nc3qg" title="Fit Box to your Item Special Folding Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
 	}
         
 
