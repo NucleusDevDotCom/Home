@@ -1,53 +1,54 @@
-{
-	[
+[
+	{
 	  "FirstDay": "2023-01-03",
 	  "OpenTrade": "56.48",
 	  "LastDay": "2023-03-10",
 	  "CloseTrade": "52.93",
 	  "Diff": -3.55,
 	  "AnnualPercentage": "-6.29%"
-	],
-    [
+	}
+	,
+    {
 	  "FirstDay": "2018-01-26",
 	  "OpenTrade": "442.56",
 	  "LastDay": "2018-12-31",
 	  "CloseTrade": "751.84",
 	  "Diff": 309.285,
 	  "AnnualPercentage": "69.88%"
-	],
-	[
+	},
+	{
 	  "FirstDay": "2019-01-02",
 	  "OpenTrade": "751.84",
 	  "LastDay": "2019-12-31",
 	  "CloseTrade": "241.92",
 	  "Diff": -509.92,
 	  "AnnualPercentage": "-67.82%"
-	],
-	[
+	},
+	{
 	  "FirstDay": "2020-01-02",
 	  "OpenTrade": "241.92",
 	  "LastDay": "2020-12-31",
 	  "CloseTrade": "268.64",
 	  "Diff": 26.72,
 	  "AnnualPercentage": "11.04%"
-	],
-	[
+	},
+	{
 	  "FirstDay": "2021-01-04",
 	  "OpenTrade": "268.64",
 	  "LastDay": "2021-12-31",
 	  "CloseTrade": "74.12",
 	  "Diff": -194.52,
 	  "AnnualPercentage": "-72.41%"
-	],
-	[
+	},
+	{
 	  "FirstDay": "2022-01-03",
 	  "OpenTrade": "74.12",
 	  "LastDay": "2022-12-30",
 	  "CloseTrade": "56.48",
 	  "Diff": -17.64,
 	  "AnnualPercentage": "-23.80%"
-	]
-}
+	}
+]
 
 					
 					
