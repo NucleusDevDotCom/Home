@@ -1,5 +1,9 @@
 import dataJson from '/vxx_annual.json' assert {type: 'json'};
-let htmlVXX1 = '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+
+async function GetAnnual(){
+	   var e = document.getElementById('Panel');
+	   e.innerHTML = e.innerHTML + 
+	                  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
 		              '<p><b>' + 'VXX - Annual' + '</b><br>' +
                       'Open Day: ' + dataJson[0].FirstDay + '<br>' +
                       'Open Trade: ' + dataJson[0].OpenTrade + '<br>' + 
@@ -8,8 +12,9 @@ let htmlVXX1 = '<div style="border:1px solid; border-radius:3px;width:200px;padd
                       'Diff: ' + dataJson[0].Diff + '<br>' +
 					  'Annual Percentage: ' + dataJson[0].AnnualPercentage + '<br>' +
 					  '</p></div>';
-
-let htmlVXX2 = '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+		
+		e.innerHTML = e.innerHTML + 
+	                  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
 		              '<p><b>' + 'VXX - Annual' + '</b><br>' +
                       'Open Day: ' + dataJson[1].FirstDay + '<br>' +
                       'Open Trade: ' + dataJson[1].OpenTrade + '<br>' + 
@@ -19,7 +24,8 @@ let htmlVXX2 = '<div style="border:1px solid; border-radius:3px;width:200px;padd
 					  'Annual Percentage: ' + dataJson[1].AnnualPercentage + '<br>' +
 					  '</p></div>';
 					  
-let htmlVXX3 = '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+		e.innerHTML = e.innerHTML + 
+	                  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
 		              '<p><b>' + 'VXX - Annual' + '</b><br>' +
                       'Open Day: ' + dataJson[2].FirstDay + '<br>' +
                       'Open Trade: ' + dataJson[2].OpenTrade + '<br>' + 
@@ -29,7 +35,8 @@ let htmlVXX3 = '<div style="border:1px solid; border-radius:3px;width:200px;padd
 					  'Annual Percentage: ' + dataJson[2].AnnualPercentage + '<br>' +
 					  '</p></div>';
 					  
-let htmlVXX4 = '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+		e.innerHTML = e.innerHTML + 
+	                  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
 		              '<p><b>' + 'VXX - Annual' + '</b><br>' +
                       'Open Day: ' + dataJson[3].FirstDay + '<br>' +
                       'Open Trade: ' + dataJson[3].OpenTrade + '<br>' + 
@@ -39,7 +46,8 @@ let htmlVXX4 = '<div style="border:1px solid; border-radius:3px;width:200px;padd
 					  'Annual Percentage: ' + dataJson[3].AnnualPercentage + '<br>' +
 					  '</p></div>';
 					  
-let htmlVXX5 = '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+		e.innerHTML = e.innerHTML + 
+	                  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
 		              '<p><b>' + 'VXX - Annual' + '</b><br>' +
                       'Open Day: ' + dataJson[4].FirstDay + '<br>' +
                       'Open Trade: ' + dataJson[4].OpenTrade + '<br>' + 
@@ -49,7 +57,8 @@ let htmlVXX5 = '<div style="border:1px solid; border-radius:3px;width:200px;padd
 					  'Annual Percentage: ' + dataJson[4].AnnualPercentage + '<br>' +
 					  '</p></div>';
 					  
-let htmlVXX6 = '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+		e.innerHTML = e.innerHTML + 
+	                  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
 		              '<p><b>' + 'VXX - Annual' + '</b><br>' +
                       'Open Day: ' + dataJson[5].FirstDay + '<br>' +
                       'Open Trade: ' + dataJson[5].OpenTrade + '<br>' + 
@@ -59,3 +68,5 @@ let htmlVXX6 = '<div style="border:1px solid; border-radius:3px;width:200px;padd
 					  'Annual Percentage: ' + dataJson[5].AnnualPercentage + '<br>' +
 					  '</p></div>';
 					  
+					  
+	};
