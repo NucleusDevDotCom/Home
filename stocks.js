@@ -66,6 +66,5 @@ e.innerHTML = e.innerHTML +
 			  'Diff: ' + dataJson[5].Diff + '<br>' +
 			  'Annual Percentage: ' + dataJson[5].AnnualPercentage + '<br>' +
 			  '</p></div>';
-e.style.display = 'inline-block';
 			  
 			  
