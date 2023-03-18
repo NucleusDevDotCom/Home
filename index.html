@@ -47,8 +47,8 @@
 	<div style="float:left; width:100%; height:1px; border-top:1px solid;margin-top:13px;margin-bottom:13px;border-color:#AAAA;"></div>
 
 	<div id='Panel' style="float:left; display:inline-block; height:500px; width:100%;border:0px solid;border-radius:3px; margin-left:7px;"></div>
-        <div id='Panel2' style="float:left; display:inline-block; height:500px; width:100%;border:0px solid;border-radius:3px; margin-left:7px;"></div>
-	
+	<div id='Panel2' style="float:left; display:none; height:500px; width:100%;border:0px solid;border-radius:3px; margin-left:7px;"></div>
+
 	<script type="module" src="stocks.js"></script>
 	<script>
 
@@ -68,7 +68,7 @@
 	const time = "/range/1/day";
 	const bDate = yyyy + '-' + mm + '-' + dd;
 	const eDate =  yyyy + '-' + mm + '-' + dd;
-
+    
     // Weather
 	document.getElementsByClassName('boxes')[0]
         .addEventListener('click', function (event) {
@@ -109,7 +109,7 @@
                       'Open: ' + data.results[0].o + '<br>' +
 			          'High: ' + data.results[0].h + '<br>' +
                       'Low: ' + data.results[0].l + '<br>' +
-					  '</p></div>' + htmlVXX1 + htmlVXX2 + htmlVXX3 + htmlVXX4 + htmlVXX5 + htmlVXX6 ;
+					  '</p></div>'
 	};
 
 	// Get Stock   
@@ -139,7 +139,7 @@
 		              '<a href="https://www.youtube.com/@NucleusDev" target="_blank">Youtube Channel - NucleusDev</a>' +
                       '</div><br/>';
 		e.innerHTML = e.innerHTML + 
-		              '<iframe width="350" height="200" src="https://www.youtube.com/embed/CwoIV5nc3qg" title="Fit Box to your Item Special Folding Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+		              '<iframe  width="350" height="200" src="https://www.youtube.com/embed/CwoIV5nc3qg" title="Fit Box to your Item Special Folding Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
 	}
 
     </script>
