@@ -2,7 +2,7 @@ import dataJson from '/vxx_annual.json' assert {type: 'json'};
 
 var e = document.getElementById('Panel2');
 e.innerHTML = e.innerHTML + 
-			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px; display:inline-block;">' + 
 			  '<p><b>' + 'VXX - Annual' + '</b><br>' +
 			  'Open Day: ' + dataJson[0].FirstDay + '<br>' +
 			  'Open Trade: ' + dataJson[0].OpenTrade + '<br>' + 
@@ -13,7 +13,7 @@ e.innerHTML = e.innerHTML +
 			  '</p></div>';
 
 e.innerHTML = e.innerHTML + 
-			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px; display:inline-block;">' + 
 			  '<p><b>' + 'VXX - Annual' + '</b><br>' +
 			  'Open Day: ' + dataJson[1].FirstDay + '<br>' +
 			  'Open Trade: ' + dataJson[1].OpenTrade + '<br>' + 
@@ -24,7 +24,7 @@ e.innerHTML = e.innerHTML +
 			  '</p></div>';
 			  
 e.innerHTML = e.innerHTML + 
-			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px; display:inline-block;">' + 
 			  '<p><b>' + 'VXX - Annual' + '</b><br>' +
 			  'Open Day: ' + dataJson[2].FirstDay + '<br>' +
 			  'Open Trade: ' + dataJson[2].OpenTrade + '<br>' + 
@@ -35,7 +35,7 @@ e.innerHTML = e.innerHTML +
 			  '</p></div>';
 			  
 e.innerHTML = e.innerHTML + 
-			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px; display:inline-block;">' + 
 			  '<p><b>' + 'VXX - Annual' + '</b><br>' +
 			  'Open Day: ' + dataJson[3].FirstDay + '<br>' +
 			  'Open Trade: ' + dataJson[3].OpenTrade + '<br>' + 
@@ -46,7 +46,7 @@ e.innerHTML = e.innerHTML +
 			  '</p></div>';
 			  
 e.innerHTML = e.innerHTML + 
-			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px; display:inline-block;">' + 
 			  '<p><b>' + 'VXX - Annual' + '</b><br>' +
 			  'Open Day: ' + dataJson[4].FirstDay + '<br>' +
 			  'Open Trade: ' + dataJson[4].OpenTrade + '<br>' + 
@@ -57,7 +57,7 @@ e.innerHTML = e.innerHTML +
 			  '</p></div>';
 			  
 e.innerHTML = e.innerHTML + 
-			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px;">' + 
+			  '<div style="border:1px solid; border-radius:3px;width:200px;padding:15px; display:inline-block;">' + 
 			  '<p><b>' + 'VXX - Annual' + '</b><br>' +
 			  'Open Day: ' + dataJson[5].FirstDay + '<br>' +
 			  'Open Trade: ' + dataJson[5].OpenTrade + '<br>' + 
@@ -66,5 +66,6 @@ e.innerHTML = e.innerHTML +
 			  'Diff: ' + dataJson[5].Diff + '<br>' +
 			  'Annual Percentage: ' + dataJson[5].AnnualPercentage + '<br>' +
 			  '</p></div>';
+e.style.display = 'inline-block';
 			  
 			  
