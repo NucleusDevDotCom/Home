@@ -55,9 +55,10 @@
 	};
 	
 	async function loadHtml() {
-     const response = await fetch("pintrest.html")
-     const text = await response.text()
-     document.getElementById('Panel').insertAdjacentText('beforeend', text)
+     const response = await fetch("pintrest.html");
+     const text = await response.text();
+     var pnl = document.getElementById('Panel');
+	 pnl.innerHTML = text;
     }
 
 	</script>
