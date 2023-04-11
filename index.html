@@ -63,7 +63,7 @@
     }
 	async function getParams(){
 	var parms = new URLSearchParams(window.location.search);
-	for (const k of parms.keys)
+	for (const k of parms.keys())
 	{
 	if (k === 'pintrest')
 	{loadhtml('pintrest.html');}
