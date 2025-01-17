@@ -3,33 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nucleus Development</title>
-    <!-- Add your stylesheets, scripts, or other meta tags here -->
+    <title>Product Features - Your Company</title>
     <style>
-        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .top-bar {
+            background: #fff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            padding: 0 20px;
+        }
+        .top-bar img {
+            height: 30px;
+        }
+        .top-bar a {
+            color: #555;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        header {
+            background: #555;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+			
+        }
+        header img {
+            margin-bottom: 10px;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .hero {
+            background: #f4f4f4;
+            padding: 4rem 2rem;
+        }
+        .features, .testimonials, .pricing, .faq {
+            background: #fff;
+            margin: 1rem 0;
+        }
+        .cta {
+            background: #007BFF;
+            color: #fff;
+            padding: 1rem;
+            margin: 2rem 0;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
 
-<!-- Header Section -->
+<div class="top-bar">
+    <div>
+        <div style="display:block; position:relative; top:5px;"><img src="NucleusHeader.png" alt="Parent Company Logo"></div>
+    </div>
+	<div>
+        <a href="https://www.nucleusdev.com" target="_blank">Nucleus Development LLC</a>
+    </div>
+</div>
+
 <header>
-	<div style="width:700px; border:0px solid; margin:auto;">
-    <div style="padding-left:20px;" >
-        <img src="Page_1.PNG" alt="Page2">
+    <img src="Tips System Logo.png" alt="Product Logo" width="350px" height="175px">
+    <nav>
+        <a href="#features">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Streamline Your Workflow with Ease</h2>
+    <p>Our application automates the flow of information, keeping management updated and simplifying audits.</p>
+    <a href="pricing.html" class="cta">See Pricing</a>
+</section>
+
+<section id="features" class="features">
+    <h2>Features</h2>
+    <div>
+        <h3>Email Integration</h3>
+        <p>Automatically process emails from your parent company or manually enter data from emails to create entries.</p>
     </div>
-	<div style="width:99%; border:1px solid; height:0px; margin-left:2px;"></div>
-	<div >
-        <img src="Page_2.PNG" alt="Page5">
+    <div>
+        <h3>Workflow Automation</h3>
+        <p>Initiate a workflow that keeps management informed of the status until completion.</p>
     </div>
-	<div style="width:99%; border:1px solid; height:0px; margin-left:2px;"></div>
-	<div >
-        <img src="Page_3.PNG" alt="Page6">
+    <div>
+        <h3>Status Tracking</h3>
+        <p>Track the status of forms in real-time to ensure everything is on track.</p>
     </div>
-	<div style="width:99%; border:1px solid; height:0px; margin-left:2px;"></div>
-	<div style="padding-left:10px;">
-        <img src="Page_4.PNG" alt="Page1">
+    <div>
+        <h3>Notifications</h3>
+        <p>Notify the parent company of status updates, ensuring everyone is on the same page.</p>
     </div>
-	</div>
- 
+    <div>
+        <h3>Audit Facilitation</h3>
+        <p>Make third-party audits straightforward with comprehensive tracking and reporting features.</p>
+    </div>
+    <a href="pricing.html" class="cta">See Pricing</a>
+</section>
+
+<section id="testimonials" class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <blockquote>
+        "This product has made managing workflows seamless and audits a breeze!" - Satisfied Client
+    </blockquote>
+</section>
+
+<section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>What does the application do?</strong> It automates the flow of information, tracks statuses, and notifies relevant parties.</p>
+    <p><strong>How does it help with audits?</strong> By providing detailed records and reports that simplify the audit process.</p>
+</section>
+
+<footer id="contact">
+    <p>&copy; 2024 Your Company</p>
+    <p><a href="mailto:support@example.com">Contact Us</a></p>
+</footer>
+
 </body>
 </html>
