@@ -20,9 +20,18 @@
             text-align: center;
         }
 
-        .logo {
-            display: inline-block;
-            margin-right: 20px;
+        /* Top Bar */
+        .top-bar {
+            background-color: #fff;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 5px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar .logo img {
+            height: 30px;
         }
 
         nav {
@@ -46,12 +55,27 @@
             font-weight: bold;
         }
 
+        /* Hero Section with Bold Background */
         .hero {
             text-align: center;
-            padding: 50px 0;
-            background-color: #f5f5f5;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://www.toptal.com/designers/subtlepatterns/uploads/geometry.png'); /* Bold pattern */
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* White text for contrast */
+        }
+	    
+	.hero h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
 
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+	    
         .about-us,
         .products-services,
         .why-choose-us,
@@ -73,9 +97,11 @@
 
 <!-- Header Section -->
 <header>
-    <!-- Logo -->
-    <div class="logo">
-        <img src="nucleus.png" alt="Nucleus Image" width="200px">
+    <!-- Top Bar with Logo -->
+    <div class="top-bar">
+       <div class="logo">
+          <img src="NucleusHeader.png" alt="Nucleus Logo">
+       </div>
     </div>
 
     <!-- Navigation Bar -->
@@ -88,9 +114,10 @@
     </nav>
 </header>
 
+<!-- Hero Section with Bold Background -->
 <section class="hero">
     <h1>Welcome to Nucleus Development LLC</h1>
-    <p>Writing applications to improve processes in a data driven enviornment.</p>
+    <p>Writing applications to improve processes in a data-driven environment.</p>
 </section>
 
 <section class="about-us">
